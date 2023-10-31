@@ -42,7 +42,7 @@ public class PreprocessResult {
         test_pts.put(id, v);
     }
     /**
-     * 
+     *
      * @param stmt statement that allocates a new object
      * @return id of the object allocated
      */
@@ -67,7 +67,7 @@ public class PreprocessResult {
         var stmts = ir.getStmts();
         Integer id = 0;
         for (var stmt : stmts) {
-         
+
             if(stmt instanceof Invoke)
             {
                 var exp = ((Invoke) stmt).getInvokeExp();
@@ -94,12 +94,13 @@ public class PreprocessResult {
                             this.test(test_id, pt);
                         }
                     }
-                    
+
                 }
             }
             else if(stmt instanceof New)
             {
-                this.alloc((New)stmt, id);
+                if(id!=0) // ignore unlabeled `new` stmts
+                    this.alloc((New)stmt, id);
             }
         }
     }

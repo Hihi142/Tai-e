@@ -1,4 +1,4 @@
-rootProject.name = "tai-e"
+rootProject.name = "Tai-e"
 
 include(
     ":", // root project
