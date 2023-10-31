@@ -9,7 +9,7 @@ public class PointerAnalysisResult extends TreeMap<Integer, TreeSet<Integer>> {
     public String toString(){
         return String.join("\n", this.keySet().stream().map(key->{
             var objs = this.get(key);
-            var objs_string = String.join(", ", 
+            var objs_string = String.join(" ",
                 Arrays.stream(objs.toArray(new Integer[0]))
                 .map(String::valueOf)
                 .toArray(String[]::new)
