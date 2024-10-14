@@ -7,14 +7,14 @@ public class Invocation {
       public Obj() {}
       public Obj f1() { return this; }
     }
-  
+
     public static Obj f2(Obj a1) {
-      Benchmark.test(1, a1); 
+      Benchmark.test(1, a1);
       Benchmark.alloc(2);
       Obj a2 = new Obj();
       return a2;
     }
-  
+
     public static void main(String[] args) {
       Benchmark.alloc(1);
       Obj a3 = new Obj();
@@ -23,7 +23,7 @@ public class Invocation {
       Obj a5 = a4.f1();
       Benchmark.test(3, a5);
     }
-  
+
 }
 /*
 Answer:

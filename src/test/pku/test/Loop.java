@@ -6,7 +6,7 @@ import benchmark.objects.B;
 public class Loop {
 
   public static void main(String[] args) {
-    Benchmark.alloc(1); 
+    Benchmark.alloc(1);
     B b1 = new B();
     Benchmark.alloc(2);
     B b2 = new B();
@@ -19,9 +19,9 @@ public class Loop {
         b2 = b3;
         b3 = b4;
     }
-    Benchmark.test(1, b1); 
+    Benchmark.test(1, b1);
     Benchmark.test(2, b2);
-    Benchmark.test(3, b3); 
+    Benchmark.test(3, b3);
     Benchmark.test(4, b4);
   }
 }

@@ -15,13 +15,13 @@ public class Field2 {
     a1.f = b1;
     if(args.length > 1) a2.f = b2;
     B b3 = a1.f;
-    Benchmark.test(1, b3); 
+    Benchmark.test(1, b3);
     B b4 = a2.f;
-    Benchmark.test(2, b4); 
+    Benchmark.test(2, b4);
   }
 }
 /*
-Answer: 
+Answer:
   1 : 1
   2 : 2
 */
